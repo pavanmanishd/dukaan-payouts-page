@@ -100,37 +100,38 @@ function App() {
   );
 
   return (
-    <div>
-      <div className="sidebar">
-        <div>
-          <div className="profile_container">
-            <div className="profile_sub_1">
-              <div className="profile_img_div">
-                <img src={profile} alt="profile" className="profile_img" />
+    <div className="page">
+      <div className="sidebar_container">
+        <div className="sidebar">
+          <div>
+            <div className="profile_container">
+              <div className="profile_sub_1">
+                <div className="profile_img_div">
+                  <img src={profile} alt="profile" className="profile_img" />
+                </div>
+                <div className="profile_details_div">
+                  <p className="profile_name">Nishyan</p>
+                  <p className="profile_store_link">Visit store</p>
+                </div>
               </div>
-              <div className="profile_details_div">
-                <p className="profile_name">Nishyan</p>
-                <p className="profile_store_link">Visit store</p>
+              <div className="profile_sub_2">
+                <img
+                  src={arrow_down}
+                  alt="arrow_down"
+                  className="arrow_down_img"
+                />
               </div>
             </div>
-            <div className="profile_sub_2">
-              <img
-                src={arrow_down}
-                alt="arrow_down"
-                className="arrow_down_img"
-              />
+            <div className="side_bar_logos_container">{allLinks}</div>
+          </div>
+          <div className="credits_div">
+            <div className="credits_img_div">
+              <img src={wallet_logo} alt="wallet_logo" className="credits_img" />
             </div>
-          </div>
-
-          <div className="side_bar_logos_container">{allLinks}</div>
-        </div>
-        <div className="credits_div">
-          <div className="credits_img_div">
-            <img src={wallet_logo} alt="wallet_logo" className="credits_img" />
-          </div>
-          <div className="credits_details">
-            <p className="credits_text">Available credits</p>
-            <p className="credits_num">222.10</p>
+            <div className="credits_details">
+              <p className="credits_text">Available credits</p>
+              <p className="credits_num">222.10</p>
+            </div>
           </div>
         </div>
       </div>
