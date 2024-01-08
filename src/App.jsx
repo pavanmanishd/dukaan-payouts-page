@@ -13,7 +13,7 @@ import Discounts_logo from "./assets/sidebar/DiscountsFalse.png";
 import Audience_logo from "./assets/sidebar/CustomersFalse.png";
 import Appearence_logo from "./assets/sidebar/AppearanceFalse.png";
 import Plugin_logo from "./assets/sidebar/PluginFalse.png";
-
+import wallet_logo from "./assets/sidebar/wallet.svg";
 function App() {
   const sidebarLogos = [
     {
@@ -124,12 +124,13 @@ function App() {
 
           <div className="side_bar_logos_container">{allLinks}</div>
         </div>
-        <div>
-          credits div
-          <div></div>
-          <div>
-            <p>Available credits</p>
-            <p>222.10</p>
+        <div className="credits_div">
+          <div className="credits_img_div">
+            <img src={wallet_logo} alt="wallet_logo" className="credits_img" />
+          </div>
+          <div className="credits_details">
+            <p className="credits_text">Available credits</p>
+            <p className="credits_num">222.10</p>
           </div>
         </div>
       </div>
