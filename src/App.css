@@ -85,12 +85,17 @@ body {
 /*sidebar logos*/
 
 .side_bar_logos_container {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-evenly;
   height: 100%;
-  width: var(--sidebar-width);
+  width: var(--sidebar-width); */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.25rem;
+  flex: 1 0 0;
 }
 
 .sidebar_link_container {
@@ -98,6 +103,7 @@ body {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  padding: 0.3rem 0.5rem;
 }
 
 .sidebar_logo {
@@ -225,9 +231,42 @@ body {
   width: 100%;
 }
 
-.overview>p{
+.overview_heading{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+}
+
+.overview_heading>p{
   font-weight: 600;
   font-size: 2rem;
+  /* margin: 0%; */
+}
+
+.overview_filter{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 0.5rem 0.5rem;
+  /* width: 100%; */
+}
+.overview_filter>p{
+  font-weight: 400;
+  font-size: 1rem;
+  margin: 0%;
+  /* padding: 0.5rem 1rem; */
+}
+.overview_filter>img{
+  width: 20px;
+  height: 20px;
+  margin-left: 0.5rem;
+  cursor: pointer;
 }
 
 .overview_cards{
@@ -268,7 +307,7 @@ body {
 }
 
 .high_card{
-  background: #1e2640;
+  background: #146EB4;
   /* border-radius: 10px; */
   display: flex;
   flex-direction: column;
@@ -292,7 +331,7 @@ body {
   width: 100%;
   /* padding: 10px; */
   border-radius: 10px;
-  background-color:#353c53;
+  background-color:#0E4F82;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -330,7 +369,6 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
 }
 
 .num_orders>p{
@@ -344,5 +382,147 @@ body {
 }
 
 .orders_text_2{
-  color: cadetblue;
+  color: #146EB4;
+}
+
+
+/* Transactions */
+
+.transactions{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.trans_name{
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+.trans_category{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.trans_cat_not_selec{
+  background: grey;
+  color: aliceblue;
+  border-radius: 100px;
+  padding: 0.3rem 1rem;
+  margin-right: 1rem;
+}
+
+.trans_cat_selec{
+  background: #146EB4;
+  color: white;
+  border-radius: 100px;
+  padding: 0.3rem 1rem;
+}
+
+.table_container{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.filters{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.filter_left{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.filter_right{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.fil_button{
+  border: 1.5px solid gray;
+  border-radius: 7px;
+  padding: 0.7rem 1rem;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+.table_sub_container{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+}
+.table,
+.table_head,
+.table_row {
+  margin: 0;
+}
+.table_row,
+.table_head {
+  box-sizing: border-box;
+}
+
+.table{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table_head {
+  background: #F2F2F2;
+  color: #4D4D4D;
+  font-weight: 600;
+  font-size: 0.9rem;
+  /* padding: 0.5rem 1rem; */
+  /* height: 3rem;  */
+}
+
+.table_row {
+  /* background: #353c53; */
+  /* color: white; */
+  font-weight: 400;
+  font-size: 0.9rem;
+  /* height: 3rem;  */
+  /* padding: 0.5rem 1rem; */
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.table_row>td{
+  text-align: left;
+}
+.table_head>th{
+  text-align: left;
+}
+.table_row>td:last-child{
+  text-align: right;
+}
+.table_head>th:last-child{
+  text-align: right;
+}
+
+th,td{
+  padding: 1rem 1rem;
+}
+
+th:first-child,td:first-child{
+  padding: 1rem 2rem;
+}
+
+th:last-child,td:last-child{
+  padding: 1rem 2rem;
 }

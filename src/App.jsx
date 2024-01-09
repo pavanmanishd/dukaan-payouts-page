@@ -1,22 +1,26 @@
 import "./App.css";
 import profile from "./assets/profile.png";
-import arrow_down from "./assets/down_arrow.png";
+import arrow_down from "./assets/arrow_down.svg";
+import arrow_down_black from "./assets/arrow_down_black.svg";
 
-import Home_logo from "./assets/sidebar/HomeFalse.png";
-import Orders_logo from "./assets/sidebar/OrdersFalse.png";
-import Products_logo from "./assets/sidebar/CatalogueFalse.png";
-import Delivery_logo from "./assets/sidebar/DeliveryFalse.png";
-import Marketing_logo from "./assets/sidebar/MarketingFalse.png";
-import Analytics_logo from "./assets/sidebar/AnalyticsFalse.png";
-import Payments_logo from "./assets/sidebar/PaymentsTrue.png";
-import Discounts_logo from "./assets/sidebar/DiscountsFalse.png";
-import Audience_logo from "./assets/sidebar/CustomersFalse.png";
-import Appearence_logo from "./assets/sidebar/AppearanceFalse.png";
-import Plugin_logo from "./assets/sidebar/PluginFalse.png";
+import Home_logo from "./assets/sidebar/Home.svg";
+import Orders_logo from "./assets/sidebar/Orders.svg";
+import Products_logo from "./assets/sidebar/Products.svg";
+import Delivery_logo from "./assets/sidebar/Delivery.svg";
+import Marketing_logo from "./assets/sidebar/Marketing.svg";
+import Analytics_logo from "./assets/sidebar/Analytics.svg";
+import Payments_logo from "./assets/sidebar/Payouts.svg";
+import Discounts_logo from "./assets/sidebar/Discounts.svg";
+import Audience_logo from "./assets/sidebar/Audience.svg";
+import Appearence_logo from "./assets/sidebar/Appearence.svg";
+import Plugin_logo from "./assets/sidebar/Plugins.svg";
 import wallet_logo from "./assets/sidebar/wallet.svg";
 
-// import help_logo from "./assets/help.svg";
-
+import help_logo_black from "./assets/help_black.svg";
+import help_logo_white from "./assets/help_white.svg";
+import arrow_side from "./assets/arrow_side.svg";
+import arrow_side_blue from "./assets/arrow_side_blue.svg";
+import search_logo from "./assets/search.svg";
 function App() {
   const sidebarLogos = [
     {
@@ -149,12 +153,16 @@ function App() {
               <p>Payouts</p>
             </div>
             <div className="navbar_1_2">
-              <div>?</div>
+              <div>
+                <img src={help_logo_black} alt="help_logo" />
+              </div>
               <p>How it works</p>
             </div>
           </div>
           <div className="navbar_2">
-            <div>?</div>
+            <div>
+              <img src={search_logo} alt="search_logo" />
+            </div>
             <input type="text" placeholder="Search features, tutorials, etc." />
           </div>
           <div className="navbar_3">
@@ -164,20 +172,26 @@ function App() {
         </div>
         <div className="view_container">
           <div className="overview">
-            <p>Overview</p>
+            <div className="overview_heading">
+              <p>Overview</p>
+              <div className="overview_filter">
+                <p>This Month</p>
+                <img src={arrow_down_black} alt="arrow_down" />
+              </div>
+            </div>
             <div className="overview_cards">
               <div className="card high_card">
                 <div className="sub_card_1">
                   <div className="card_1">
                     <p>Next Payout</p>
-                    <div>{/* <img src={help_logo} alt="help_logo" /> */}?</div>
+                    <div><img src={help_logo_white} alt="help_logo" /></div>
                   </div>
                   <div className="card_2">
                     <p className="amt">₹2,312.23</p>
                     {/* <div>23 orders ></div> */}
                     <div className="num_orders">
                       <p>23 orders</p>
-                      <span>&gt;</span>
+                      <img src={arrow_side} alt=">" />
                     </div>
                   </div>
                 </div>
@@ -193,13 +207,15 @@ function App() {
                 <div className="sub_card_1">
                   <div className="card_1">
                     <p>Amount pending</p>
-                    <div>?</div>
+                    <div>
+                      <img src={help_logo_black} alt="help_logo" />
+                    </div>
                   </div>
                   <div className="card_2">
                     <p className="amt">₹92,312.20</p>
                     <div className="num_orders orders_text_2">
-                      <p>23 orders</p> 
-                      <span>&gt;</span>
+                      <p>23 orders</p>
+                      <img src={arrow_side_blue} alt=">" />
                     </div>
                   </div>
                 </div>
@@ -208,7 +224,9 @@ function App() {
                 <div className="sub_card_1">
                   <div className="card_1">
                     <p>Amount processed</p>
-                    <div>?</div>
+                    <div>
+                      <img src={help_logo_black} alt="help_logo" />
+                    </div>
                   </div>
                   <div className="card_2">
                     <p className="amt">₹23,92,312.19</p>
@@ -217,23 +235,71 @@ function App() {
               </div>
             </div>
           </div>
-          <div>
-            <div>
-              <p>Transactions | This Month</p>
+          <div className="transactions">
+            <p className="trans_name">Transactions | This Month</p>
+            <div className="trans_category">
+              <div className="trans_cat_not_selec">Payouts(22)</div>
+              <div className="trans_cat_selec">Refunds(6)</div>
             </div>
-            <div>
-              <div>Payouts(22)</div>
-              <div>Refunds(6)</div>
-            </div>
-            <div>
-              <div>
-                <div>Search bar</div>
-                <div>
-                  <div>Sort</div>
-                  <div>Download Button</div>
+            <div className="table_container">
+              <div className="filters">
+                <div className="filter_left">
+                  <p>
+                    <img src={search_logo} alt="search_logo" />
+                  </p>
+                  <input type="text" placeholder="Order ID or transaction ID" />
+                </div>
+                <div className="filter_right">
+                  <div className="fil_button">Sort</div>
+                  <div className="fil_button">Download Button</div>
                 </div>
               </div>
-              <div>Table</div>
+              <div className="table_sub_container">
+                <table className="table">
+                  <tr className="table_head">
+                    <th>Order ID</th>
+                    <th>Status</th>
+                    <th>Transaction ID</th>
+                    <th>Refund date</th>
+                    <th>Order amount</th>
+                  </tr>
+                  <tr className="table_row">
+                    <td>#281209</td>
+                    <td>Successful</td>
+                    <td>131634495747</td>
+                    <td>Today, 08:45 PM</td>
+                    <td>₹1,125.00</td>
+                  </tr>
+                  <tr className="table_row">
+                    <td>#281209</td>
+                    <td>Successful</td>
+                    <td>131634495747</td>
+                    <td>Today, 08:45 PM</td>
+                    <td>₹1,125.00</td>
+                  </tr>
+                  <tr className="table_row">
+                    <td>#281209</td>
+                    <td>Successful</td>
+                    <td>131634495747</td>
+                    <td>Today, 08:45 PM</td>
+                    <td>₹1,125.00</td>
+                  </tr>
+                  <tr className="table_row">
+                    <td>#281209</td>
+                    <td>Successful</td>
+                    <td>131634495747</td>
+                    <td>Today, 08:45 PM</td>
+                    <td>₹1,125.00</td>
+                  </tr>
+                  <tr className="table_row">
+                    <td>#281209</td>
+                    <td>Successful</td>
+                    <td>131634495747</td>
+                    <td>Today, 08:45 PM</td>
+                    <td>₹1,125.00</td>
+                  </tr>
+                </table>
+              </div>
             </div>
           </div>
         </div>
