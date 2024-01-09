@@ -20,7 +20,7 @@
 body {
   margin: 0%;
   padding: 0%;
-  padding-left: var(--sidebar-width);
+  padding-left: 16rem;
 }
 
 .page {
@@ -35,10 +35,10 @@ body {
   position: fixed;
   height: 100%;
   background-color: #1e2640;
-  width: var(--sidebar-width);
+  width: var(calc(--sidebar-width+2rem));
   top: 0;
   left: 0;
-  padding: 0rem 1rem;
+  padding: 0rem;
 }
 
 .sidebar {
@@ -49,6 +49,7 @@ body {
   margin: 0%;
   width: var(--sidebar-width);
   height: 100%;
+  margin: 0rem 1rem;
 }
 
 
@@ -135,7 +136,7 @@ body {
 
   display: flex;
   width: 13rem;
-  padding: 0.5rem 1rem;
+  margin: 0.5rem 1rem;
   align-items: center;
   /* justify-content: flex-start; */
   gap: 0.75rem;
@@ -238,7 +239,7 @@ body {
   height: 4rem;
   /* width: calc(100vw - var(--sidebar-width) - 2rem); */
   width: 95%;
-  margin: 0% 0% 0% 4.7rem;
+  margin: 0% 0% 0%  0%;
 }
 
 .navbar_1 {
@@ -248,7 +249,7 @@ body {
   align-items: center;
 }
 .navbar_1 p {
-  /* padding: 0% 0% 0% 2rem; */
+  /* padding: 0% 0% 0%  0%; */
 }
 
 .navbar_1_name>p{
@@ -340,14 +341,15 @@ line-height: 1.75rem; /* 140% */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
   width: 100%;
+  /* flex-grow: 1; */
   height: 100%;
 }
 
 .overview {
   display: flex;
-  margin: 1rem 0% 0% 4.7rem;
+  margin: 1rem 0% 0%  0%;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
@@ -527,7 +529,7 @@ line-height: 2.375rem; /* 118.75% */
   justify-content: flex-start;
   align-items: flex-start;
   width: 95%;
-  margin: 1rem 0% 0% 4.7rem;
+  margin: 1rem 0% 0%  0%;
 }
 
 .trans_name {
