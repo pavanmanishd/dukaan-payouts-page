@@ -202,7 +202,7 @@ function App() {
                   <div className="card_1">
                     <p>Next Payout</p>
                     <div>
-                      <img src={help_logo_white} alt="help_logo" />
+                      <img className="help_card_logo" src={help_logo_white} alt="help_logo" />
                     </div>
                   </div>
                   <div className="card_2">
@@ -227,7 +227,7 @@ function App() {
                   <div className="card_1">
                     <p>Amount pending</p>
                     <div>
-                      <img src={help_logo_black} alt="help_logo" />
+                      <img className="help_card_logo" src={help_logo_black} alt="help_logo" />
                     </div>
                   </div>
                   <div className="card_2">
@@ -244,7 +244,7 @@ function App() {
                   <div className="card_1">
                     <p>Amount processed</p>
                     <div>
-                      <img src={help_logo_black} alt="help_logo" />
+                      <img className="help_card_logo" src={help_logo_black} alt="help_logo" />
                     </div>
                   </div>
                   <div className="card_2">
