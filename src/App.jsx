@@ -101,11 +101,13 @@ function App() {
 
   const sidebarLink = (source, alter, name, state) => {
     return (
-      <div className={`sidebar_link_container ${state? "highlight" : ""}`}>
+      <div className={`sidebar_link_container ${state ? "highlight" : ""}`}>
         <div className="sidebar_link_image_container">
           <img src={source} alt={alter} className="sidebar_logo" />
         </div>
-        <p className={`sidebar_logo_name ${state? "highlight_text" : ""}`}>{name}</p>
+        <p className={`sidebar_logo_name ${state ? "highlight_text" : ""}`}>
+          {name}
+        </p>
       </div>
     );
   };
@@ -157,26 +159,31 @@ function App() {
         </div>
       </div>
       <div className="main_container">
-        <div className="navbar">
-          <div className="navbar_1">
-            <div className="navbar_1_name">
-              <p>Payouts</p>
+        <div className="nav_super">
+          <div className="navbar">
+            <div className="navbar_1">
+              <div className="navbar_1_name">
+                <p>Payouts</p>
+              </div>
+              <div className="navbar_1_2">
+                <img src={help_logo_black} alt="help_logo" />
+                <p>How it works</p>
+              </div>
             </div>
-            <div className="navbar_1_2">
-              <img src={help_logo_black} alt="help_logo" />
-              <p>How it works</p>
+            <div className="navbar_2">
+              <img src={search_logo} alt="search_logo" />
+              <input
+                type="text"
+                placeholder="Search features, tutorials, etc."
+              />
             </div>
-          </div>
-          <div className="navbar_2">
-            <img src={search_logo} alt="search_logo" />
-            <input type="text" placeholder="Search features, tutorials, etc." />
-          </div>
-          <div className="navbar_3">
-            <div className="navbar_3_1">
-              <img src={speaker_navbar} alt="speaker_navbar" />
-            </div>
-            <div className="navbar_3_2">
-              <img src={down_navbar} alt="down_navbar" />
+            <div className="navbar_3">
+              <div className="navbar_3_1">
+                <img src={speaker_navbar} alt="speaker_navbar" />
+              </div>
+              <div className="navbar_3_2">
+                <img src={down_navbar} alt="down_navbar" />
+              </div>
             </div>
           </div>
         </div>
