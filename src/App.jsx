@@ -21,6 +21,14 @@ import help_logo_white from "./assets/help_white.svg";
 import arrow_side from "./assets/arrow_side.svg";
 import arrow_side_blue from "./assets/arrow_side_blue.svg";
 import search_logo from "./assets/search.svg";
+
+import down_navbar from "./assets/navbar/down.svg";
+import speaker_navbar from "./assets/navbar/speaker.svg";
+import sort_logo from "./assets/sort.svg";
+import download_logo from "./assets/download.svg";
+
+import success_dot from "./assets/success_dot.svg";
+import process_dot from "./assets/process_dot.svg";
 function App() {
   const sidebarLogos = [
     {
@@ -91,26 +99,26 @@ function App() {
     },
   ];
 
-  const sidebarLink = (source, alter, name) => {
+  const sidebarLink = (source, alter, name, state) => {
     return (
-      <div className="sidebar_link_container">
+      <div className={`sidebar_link_container ${state? "highlight" : ""}`}>
         <div className="sidebar_link_image_container">
           <img src={source} alt={alter} className="sidebar_logo" />
         </div>
-        <p className="sidebar_logo_name">{name}</p>
+        <p className={`sidebar_logo_name ${state? "highlight_text" : ""}`}>{name}</p>
       </div>
     );
   };
 
   const allLinks = sidebarLogos.map((logo) =>
-    sidebarLink(logo.src, logo.alt, logo.name)
+    sidebarLink(logo.src, logo.alt, logo.name, logo.state)
   );
 
   return (
     <div className="page">
       <div className="sidebar_container">
         <div className="sidebar">
-          <div>
+          <div className="sidebar_sub_cont">
             <div className="profile_container">
               <div className="profile_sub_1">
                 <div className="profile_img_div">
@@ -131,17 +139,19 @@ function App() {
             </div>
             <div className="side_bar_logos_container">{allLinks}</div>
           </div>
-          <div className="credits_div">
-            <div className="credits_img_div">
-              <img
-                src={wallet_logo}
-                alt="wallet_logo"
-                className="credits_img"
-              />
-            </div>
-            <div className="credits_details">
-              <p className="credits_text">Available credits</p>
-              <p className="credits_num">222.10</p>
+          <div className="credits">
+            <div className="credits_div">
+              <div className="credits_img_div">
+                <img
+                  src={wallet_logo}
+                  alt="wallet_logo"
+                  className="credits_img"
+                />
+              </div>
+              <div className="credits_details">
+                <p className="credits_text">Available credits</p>
+                <p className="credits_num">222.10</p>
+              </div>
             </div>
           </div>
         </div>
@@ -153,21 +163,21 @@ function App() {
               <p>Payouts</p>
             </div>
             <div className="navbar_1_2">
-              <div>
-                <img src={help_logo_black} alt="help_logo" />
-              </div>
+              <img src={help_logo_black} alt="help_logo" />
               <p>How it works</p>
             </div>
           </div>
           <div className="navbar_2">
-            <div>
-              <img src={search_logo} alt="search_logo" />
-            </div>
+            <img src={search_logo} alt="search_logo" />
             <input type="text" placeholder="Search features, tutorials, etc." />
           </div>
           <div className="navbar_3">
-            <div>ann</div>
-            <div>tri</div>
+            <div className="navbar_3_1">
+              <img src={speaker_navbar} alt="speaker_navbar" />
+            </div>
+            <div className="navbar_3_2">
+              <img src={down_navbar} alt="down_navbar" />
+            </div>
           </div>
         </div>
         <div className="view_container">
@@ -184,7 +194,9 @@ function App() {
                 <div className="sub_card_1">
                   <div className="card_1">
                     <p>Next Payout</p>
-                    <div><img src={help_logo_white} alt="help_logo" /></div>
+                    <div>
+                      <img src={help_logo_white} alt="help_logo" />
+                    </div>
                   </div>
                   <div className="card_2">
                     <p className="amt">₹2,312.23</p>
@@ -244,14 +256,17 @@ function App() {
             <div className="table_container">
               <div className="filters">
                 <div className="filter_left">
-                  <p>
-                    <img src={search_logo} alt="search_logo" />
-                  </p>
+                  <img src={search_logo} alt="search_logo" />
                   <input type="text" placeholder="Order ID or transaction ID" />
                 </div>
                 <div className="filter_right">
-                  <div className="fil_button">Sort</div>
-                  <div className="fil_button">Download Button</div>
+                  <div className="fil_button">
+                    <p>Sort</p>
+                    <img src={sort_logo} alt="sort_logo" />
+                  </div>
+                  <div className="fil_button">
+                    <img src={download_logo} alt="download_logo" />
+                  </div>
                 </div>
               </div>
               <div className="table_sub_container">
@@ -265,35 +280,60 @@ function App() {
                   </tr>
                   <tr className="table_row">
                     <td>#281209</td>
-                    <td>Successful</td>
+                    <td>
+                      <div className="dot">
+                        <img src={success_dot} alt="success_dot" />
+                        <p>Successful</p>
+                      </div>
+                    </td>
                     <td>131634495747</td>
                     <td>Today, 08:45 PM</td>
                     <td>₹1,125.00</td>
                   </tr>
                   <tr className="table_row">
                     <td>#281209</td>
-                    <td>Successful</td>
+                    <td>
+                      <div className="dot">
+                        <img src={process_dot} alt="process_dot" />
+                        <p>Processing</p>
+                      </div>
+                    </td>
                     <td>131634495747</td>
                     <td>Today, 08:45 PM</td>
                     <td>₹1,125.00</td>
                   </tr>
                   <tr className="table_row">
                     <td>#281209</td>
-                    <td>Successful</td>
+                    <td>
+                      <div className="dot">
+                        <img src={success_dot} alt="success_dot" />
+                        <p>Successful</p>
+                      </div>
+                    </td>
                     <td>131634495747</td>
                     <td>Today, 08:45 PM</td>
                     <td>₹1,125.00</td>
                   </tr>
                   <tr className="table_row">
                     <td>#281209</td>
-                    <td>Successful</td>
+                    <td>
+                      <div className="dot">
+                        <img src={success_dot} alt="success_dot" />
+                        <p>Successful</p>
+                      </div>
+                    </td>
                     <td>131634495747</td>
                     <td>Today, 08:45 PM</td>
                     <td>₹1,125.00</td>
                   </tr>
                   <tr className="table_row">
                     <td>#281209</td>
-                    <td>Successful</td>
+                    <td>
+                      <div className="dot">
+                        <img src={success_dot} alt="success_dot" />
+                        <p>Successful</p>
+                      </div>
+                    </td>
                     <td>131634495747</td>
                     <td>Today, 08:45 PM</td>
                     <td>₹1,125.00</td>
