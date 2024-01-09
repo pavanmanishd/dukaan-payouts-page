@@ -286,64 +286,64 @@ function App() {
                     <th>Order amount</th>
                   </tr>
                   <tr className="table_row">
-                    <td>#281209</td>
+                    <td className="orderno">#281209</td>
                     <td>
                       <div className="dot">
                         <img src={success_dot} alt="success_dot" />
                         <p>Successful</p>
                       </div>
                     </td>
-                    <td>131634495747</td>
-                    <td>Today, 08:45 PM</td>
-                    <td>₹1,125.00</td>
+                    <td className="transactionid">131634495747</td>
+                    <td className="refunddate">Today, 08:45 PM</td>
+                    <td className="orderamount">₹1,125.00</td>
                   </tr>
                   <tr className="table_row">
-                    <td>#281209</td>
+                    <td className="orderno">#281209</td>
                     <td>
                       <div className="dot">
                         <img src={process_dot} alt="process_dot" />
                         <p>Processing</p>
                       </div>
                     </td>
-                    <td>131634495747</td>
-                    <td>Today, 08:45 PM</td>
-                    <td>₹1,125.00</td>
+                    <td className="transactionid">131634495747</td>
+                    <td className="refunddate">Today, 08:45 PM</td>
+                    <td className="orderamount">₹1,125.00</td>
                   </tr>
                   <tr className="table_row">
-                    <td>#281209</td>
+                    <td className="orderno">#281209</td>
                     <td>
                       <div className="dot">
                         <img src={success_dot} alt="success_dot" />
                         <p>Successful</p>
                       </div>
                     </td>
-                    <td>131634495747</td>
-                    <td>Today, 08:45 PM</td>
-                    <td>₹1,125.00</td>
+                    <td className="transactionid">131634495747</td>
+                    <td className="refunddate">Today, 08:45 PM</td>
+                    <td className="orderamount">₹1,125.00</td>
                   </tr>
                   <tr className="table_row">
-                    <td>#281209</td>
+                    <td className="orderno">#281209</td>
                     <td>
                       <div className="dot">
                         <img src={success_dot} alt="success_dot" />
                         <p>Successful</p>
                       </div>
                     </td>
-                    <td>131634495747</td>
-                    <td>Today, 08:45 PM</td>
-                    <td>₹1,125.00</td>
+                    <td className="transactionid">131634495747</td>
+                    <td className="refunddate">Today, 08:45 PM</td>
+                    <td className="orderamount">₹1,125.00</td>
                   </tr>
                   <tr className="table_row">
-                    <td>#281209</td>
+                    <td className="orderno">#281209</td>
                     <td>
                       <div className="dot">
                         <img src={success_dot} alt="success_dot" />
                         <p>Successful</p>
                       </div>
                     </td>
-                    <td>131634495747</td>
-                    <td>Today, 08:45 PM</td>
-                    <td>₹1,125.00</td>
+                    <td className="transactionid">131634495747</td>
+                    <td className="refunddate">Today, 08:45 PM</td>
+                    <td className="orderamount">₹1,125.00</td>
                   </tr>
                 </table>
               </div>
