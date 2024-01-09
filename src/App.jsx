@@ -14,6 +14,9 @@ import Audience_logo from "./assets/sidebar/CustomersFalse.png";
 import Appearence_logo from "./assets/sidebar/AppearanceFalse.png";
 import Plugin_logo from "./assets/sidebar/PluginFalse.png";
 import wallet_logo from "./assets/sidebar/wallet.svg";
+
+// import help_logo from "./assets/help.svg";
+
 function App() {
   const sidebarLogos = [
     {
@@ -126,7 +129,11 @@ function App() {
           </div>
           <div className="credits_div">
             <div className="credits_img_div">
-              <img src={wallet_logo} alt="wallet_logo" className="credits_img" />
+              <img
+                src={wallet_logo}
+                alt="wallet_logo"
+                className="credits_img"
+              />
             </div>
             <div className="credits_details">
               <p className="credits_text">Available credits</p>
@@ -135,20 +142,84 @@ function App() {
           </div>
         </div>
       </div>
-      <div>
-        <div>Navbar</div>
-        <div>
-          <div>
-            <h1>Overview</h1>
-            <div>
-              <div>next payout Card div</div>
-              <div>amount pending Card div</div>
-              <div>amount processed div</div>
+      <div className="main_container">
+        <div className="navbar">
+          <div className="navbar_1">
+            <div className="navbar_1_name">
+              <p>Payouts</p>
+            </div>
+            <div className="navbar_1_2">
+              <div>?</div>
+              <p>How it works</p>
+            </div>
+          </div>
+          <div className="navbar_2">
+            <div>?</div>
+            <input type="text" placeholder="Search features, tutorials, etc." />
+          </div>
+          <div className="navbar_3">
+            <div>ann</div>
+            <div>tri</div>
+          </div>
+        </div>
+        <div className="view_container">
+          <div className="overview">
+            <p>Overview</p>
+            <div className="overview_cards">
+              <div className="card high_card">
+                <div className="sub_card_1">
+                  <div className="card_1">
+                    <p>Next Payout</p>
+                    <div>{/* <img src={help_logo} alt="help_logo" /> */}?</div>
+                  </div>
+                  <div className="card_2">
+                    <p className="amt">₹2,312.23</p>
+                    {/* <div>23 orders ></div> */}
+                    <div className="num_orders">
+                      <p>23 orders</p>
+                      <span>&gt;</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="card_3">
+                  <div>
+                    <div>Next payout date:</div>
+                    <div>Today, 04:00PM</div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="card">
+                <div className="sub_card_1">
+                  <div className="card_1">
+                    <p>Amount pending</p>
+                    <div>?</div>
+                  </div>
+                  <div className="card_2">
+                    <p className="amt">₹92,312.20</p>
+                    <div className="num_orders orders_text_2">
+                      <p>23 orders</p> 
+                      <span>&gt;</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="card">
+                <div className="sub_card_1">
+                  <div className="card_1">
+                    <p>Amount processed</p>
+                    <div>?</div>
+                  </div>
+                  <div className="card_2">
+                    <p className="amt">₹23,92,312.19</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <div>
             <div>
-              <h1>Transactions | This Month</h1>
+              <p>Transactions | This Month</p>
             </div>
             <div>
               <div>Payouts(22)</div>
